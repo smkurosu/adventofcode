@@ -24,9 +24,7 @@ int main(int argc, char *argv[]){
   int trees = 0;
   int place = 0;
   while(fin >> map){
-    if (place > map.size()){
-      place = 0; 
-    }
+    place = place % map.size();
     if (map[place] == '#') { 
       ++trees;
       map[place] = 'X';
